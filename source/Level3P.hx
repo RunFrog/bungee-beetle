@@ -17,13 +17,13 @@ class Level3P extends BasePlayState
 				BasePlayState.innerWallWidth
 			],
 			[120, (FlxG.height - 80), FlxG.width - 120, BasePlayState.innerWallWidth],
-			[120, 120, FlxG.width - 280, BasePlayState.innerWallWidth],
+			[120, 150, FlxG.width - 280, BasePlayState.innerWallWidth],
 			// [340, 220, BasePlayState.innerWallWidth, FlxG.height - 340],
-			[440, 120, BasePlayState.innerWallWidth, FlxG.height - 240],
-			[325, 190, BasePlayState.innerWallWidth, (FlxG.height - 335)],
-			[120, 175, BasePlayState.innerWallWidth, (FlxG.height - 320)],
-			[325, 0, BasePlayState.innerWallWidth, (85)],
-			[120, 0, BasePlayState.innerWallWidth, (85)],
+			[440, 150, BasePlayState.innerWallWidth, FlxG.height - 260],
+			[325, 240, BasePlayState.innerWallWidth, (FlxG.height - 385)],
+			[120, 240, BasePlayState.innerWallWidth, (FlxG.height - 385)],
+			[325, 0, BasePlayState.innerWallWidth, 85],
+			[120, 0, BasePlayState.innerWallWidth, 50],
 		],
 		spawns: [
 			{
@@ -31,7 +31,7 @@ class Level3P extends BasePlayState
 				type: Rock,
 			},
 		],
-		doors: [{pos: FlxPoint.get(FlxG.width - 50, 300), levelName: EndState}],
+		doors: [{pos: FlxPoint.get(FlxG.width - 50, 300), levelName: Level4P}],
 		player: FlxPoint.get(FlxG.width - 50, FlxG.height - 50),
 	};
 

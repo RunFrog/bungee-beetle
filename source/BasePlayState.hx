@@ -29,7 +29,7 @@ enum SpawnType
 	BadFly;
 	Worm(length:Int);
 	Rock;
-	// spike;
+	Spike(rotation:Int);
 }
 
 enum LevelName
@@ -37,6 +37,7 @@ enum LevelName
 	Level1P;
 	Level2P;
 	Level3P;
+	Level4P;
 	EndState;
 }
 
@@ -75,6 +76,8 @@ abstract class BasePlayState extends FlxState
 				new Level2P();
 			case Level3P:
 				new Level3P();
+			case Level4P:
+				new Level4P();
 			case EndState:
 				new EndState();
 			default:
@@ -146,6 +149,8 @@ abstract class BasePlayState extends FlxState
 			add(door);
 		}
 	}
+
+	function background() {}
 
 	override public function create()
 	{

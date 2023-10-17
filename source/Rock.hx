@@ -12,6 +12,10 @@ class Rock extends Enemy
 		super(x, y, player, speed);
 		loadGraphic("assets/images/rock.png", true, 8, 8);
 
+		animation.add("1", [0], 1);
+		animation.add("2", [1], 1);
+		animation.add("3", [2], 1);
+
 		this.scale.x = this.scale.y = rescale;
 		width *= rescale;
 		height *= rescale;
@@ -34,7 +38,9 @@ class Rock extends Enemy
 			{
 				x = target.x;
 			};
-			else {};
+
+			var ran = FlxG.random.int(1, 3);
+			animation.play('$ran');
 		}
 
 		// update velocity with friction

@@ -43,6 +43,9 @@ abstract class Enemy extends FlxSprite
 				new BadFly(x, y, player, speed);
 			case Rock:
 				new Rock(x, y, player, speed);
+			case Spike(rotation):
+				new Spike(x, y, player, speed, rotation);
+
 			default:
 				throw new Error("unknown spawn type '$type'");
 		}
