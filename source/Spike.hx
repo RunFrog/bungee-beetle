@@ -15,6 +15,7 @@ class Spike extends Enemy
 		this.scale.x = this.scale.y = rescale;
 		width *= rescale;
 		height *= rescale;
+		this.updateHitbox();
 	}
 
 	public override function update(elapsed:Float)
